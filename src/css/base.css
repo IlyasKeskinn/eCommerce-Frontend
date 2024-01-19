@@ -10,7 +10,7 @@
     --pastel-gray: #E7E6E4;
     --gray: #E4E4E4;
     --yellow: #B9A16B;
-    --light-gray : #767676;
+    --light-gray: #767676;
 }
 
 * {
@@ -70,12 +70,14 @@ a {
 
 /* text */
 
-.text-secondary{
+.text-secondary {
     color: var(--light-gray);
 }
-.fw-normal{
+
+.fw-normal {
     font-weight: 500 !important;
 }
+
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -86,4 +88,90 @@ a {
 
 .text-capitalize {
     text-transform: capitalize !important;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* display */
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+/* justify-content */
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-start {
+    justify-content:start;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-between {
+    justify-content:space-between;
+}
+.justify-content-around {
+    justify-content:space-around;
+}
+.justify-content-evenly {
+    justify-content:space-evenly;
+}
+
+/* justify-content */
+
+
+/* align-items */
+
+.align-items-start {
+    align-items: start;
+}
+.align-items-end {
+    align-items: end;
+}
+.align-items-center {
+    align-items: center;
+}
+
+/* align-items */
+
+
+/* width */
+
+.w-100{
+    width: 100% ;
+}
+
+.w-75{
+    width: 75% ;
+}
+
+.w-50{
+    width: 50% ;
+}
+
+.w-25{
+    width: 25%s ;
 }

@@ -36,3 +36,31 @@
 .btn-outlined:hover::after {
     width: 100%;
 }
+
+.button{
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+    vertical-align: middle;
+    padding: 4rem;
+    border-radius: 0;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    transition: opacity 0.1s ease-out;
+}
+.btn-primary{
+    color: var(--bg-white);
+    background-color: var(--black);
+}
+.button:hover{
+    opacity: 0.9;
+}
+
+.aside-header-button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
