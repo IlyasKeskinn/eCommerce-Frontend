@@ -33,7 +33,7 @@ textarea {
     resize: none;
 }
 
-label {
+custom-label {
     color: var(--light-gray);
     font-size: 1.6rem;
     font-weight: normal;
@@ -122,3 +122,16 @@ input[type=checkbox]:checked~span {
 .checkbox-label-text {
     margin-left: 10px;
 }
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+}
+
