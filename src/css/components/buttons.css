@@ -37,7 +37,7 @@
     width: 100%;
 }
 
-.button{
+.button {
     display: inline-block;
     text-align: center;
     font-weight: 400;
@@ -50,16 +50,40 @@
     padding-bottom: 1rem;
     cursor: pointer;
     transition: opacity 0.1s ease-out;
+    border: none;
 }
-.btn-primary{
+
+.btn-primary {
     color: var(--bg-white);
     background-color: var(--black);
 }
-.button:hover{
+
+.button:hover {
     opacity: 0.9;
 }
 
-.aside-header-button{
+.btn-secondary {
+    background-color: #e4e4e4;
+    color: var(--black);
+}
+.btn-secondary:hover {
+    background-color: #e8e8e8;
+    color: var(--black);
+}
+
+.aside-header-button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.aside-content-button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.aside .quantity-control button {
     border: none;
     cursor: pointer;
     background-color: transparent;
