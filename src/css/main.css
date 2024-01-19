@@ -2,6 +2,14 @@
 @import url(./base.css);
 /* base css */
 
+/* button css */
+@import url(./components/buttons.css);
+/* button css */
+
+/* inputs */
+@import url(./components/inputs.css);
+/* inputs */
+
 /* header  */
 @import url(./layout/header.css);
 /* header  */

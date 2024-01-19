@@ -9,6 +9,8 @@
     --pastel-pink: #F5E6E0;
     --pastel-gray: #E7E6E4;
     --gray: #E4E4E4;
+    --yellow: #B9A16B;
+    --light-gray : #767676;
 }
 
 * {
@@ -53,6 +55,35 @@ a {
     text-decoration: none;
 }
 
+
+/* container */
 .container {
     width: 1410px;
+}
+
+
+
+/* position */
+.position-relative {
+    position: relative !important;
+}
+
+/* text */
+
+.text-secondary{
+    color: var(--light-gray);
+}
+.fw-normal{
+    font-weight: 500 !important;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
 }

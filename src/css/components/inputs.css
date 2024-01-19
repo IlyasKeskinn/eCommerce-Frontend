@@ -1,0 +1,52 @@
+.group {
+    position: relative;
+    margin: 45px 0;
+}
+
+input,
+textarea {
+    width: 320px;
+    background: none;
+    color: var(--black);
+    font-size: 1.8rem;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border-radius: 0;
+    border: 1px solid var(--gray);
+}
+input::placeholder,
+textarea::placeholder {
+    color: var(--light-gray);
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border: 2px solid var(--black);
+    transition: all 0.1s ease-out;
+}
+textarea{
+    resize: none;
+}
+
+label{
+    color: var(--light-gray);
+    font-size: 1.6rem;
+    font-weight: normal;
+    pointer-events: normal;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+
+}
+
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label, textarea:valid ~ label{
+    top: -14px;
+    color: var(--black);
+    background-color: var(--bg-white);
+    padding: 0 0.3rem 0 0.5rem;
+}
+
+

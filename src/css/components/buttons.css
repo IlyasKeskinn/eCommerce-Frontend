@@ -1,0 +1,38 @@
+.btn {
+    position: relative;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-outlined-half:after {
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--black);
+    position: absolute;
+    transition: all 0.3s ease-out;
+}
+
+.btn-outlined-half:hover::after {
+    width: 65%;
+
+}
+
+
+.btn-outlined::after {
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 60%;
+    background-color: var(--black);
+    position: absolute;
+    transition: all 0.3s ease-out;
+}
+
+.btn-outlined:hover::after {
+    width: 100%;
+}
