@@ -16,7 +16,9 @@
 /* header  */
 @import url(./layout/header-mobile.css);
 /* header  */
-
+/* slider */
+@import url(./components/slideshow.css);
+/* slider */
 /* aside */
 @import url(./layout/aside.css);
 /* aside */
@@ -24,3 +26,7 @@
 /* page-overlay */
 @import url(./layout/page-overlay.css);
 /* page-overlay */
+
+/* grid */
+@import url(./grid.css);
+/* grid */

@@ -54,6 +54,9 @@ a {
     color: #222;
     text-decoration: none;
 }
+.overflow-hidden{
+    overflow: hidden;
+}
 
 
 ::-webkit-scrollbar {
@@ -493,7 +496,7 @@ a {
 /* responsive container*/
 @media (min-width: 360px) {
     .container {
-        width: 362px;
+        width: 342px;
     }
 }
 
