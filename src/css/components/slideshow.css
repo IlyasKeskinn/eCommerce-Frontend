@@ -123,7 +123,7 @@
 
 
     .slide-show-character {
-        left: 60% !important;
+        left: 50% !important;
     }
 
 
@@ -165,12 +165,13 @@
     .slider {
         height: calc(85vh - 90px) !important;
     }
+
     .slide-show-character {
-        left: 70% !important;
+        left: 55% !important;
     }
 
     .slide-show-text {
-        left: 40% !important;
+        left: 43% !important;
     }
 
     .slide-show-text h6 {
@@ -193,7 +194,10 @@
     .slide-show-text {
         left: 50% !important;
     }
- 
+
+    .slide-show-character {
+        left: 70% !important;
+    }
 
     .slide-show-text h6 {
         font-size: 1.2rem;

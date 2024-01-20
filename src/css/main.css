@@ -19,6 +19,9 @@
 /* slider */
 @import url(./components/slideshow.css);
 /* slider */
+/* collection */
+@import url(./layout/collection.css);
+/* collection */
 /* aside */
 @import url(./layout/aside.css);
 /* aside */
@@ -27,6 +30,3 @@
 @import url(./layout/page-overlay.css);
 /* page-overlay */
 
-/* grid */
-@import url(./grid.css);
-/* grid */
