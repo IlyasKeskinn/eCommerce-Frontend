@@ -48,22 +48,7 @@
 }
 
 
-.slide-show-text h6::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50% !important;
-    height: 1px;
-    width: 30px;
-    margin-top: -1px;
-    background-color: #C32A2A;
-}
 
-.slide-show-text h6 {
-    color: #C32A2A;
-    padding-left: 40px;
-    font-size: 1.4rem;
-}
 
 .slide-show h2 {
     font-size: 7rem;

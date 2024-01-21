@@ -1,5 +1,5 @@
 /* base css */
-@import url(./base.css);
+@import url(./base/base.css);
 /* base css */
 
 /* button css */
@@ -38,7 +38,11 @@
 @import url(./layout/aside.css);
 /* aside */
 
+/* home-page css */
+@import url(./pages/home.css);
+/* home-page css */
+
 /* page-overlay */
 @import url(./layout/page-overlay.css);
 /* page-overlay */
-
+@import url(./base/typography.css)

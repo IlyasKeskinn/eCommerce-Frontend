@@ -1,0 +1,79 @@
+.deal-timer {
+    margin-top: 5rem;
+}
+
+.deal-timer .dealtimer-bg {
+    height: 100% !important;
+    width: 100% !important;
+    background-color: #ebebeb;
+}
+
+.deal-timer .dealtimer-bg img {
+    height: 60rem;
+    max-width: 100% !important;
+    object-fit: cover;
+}
+
+.deal-timer-text {
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.deal-timer .dealtimer-countdown {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+.countdown-unit {
+    position: relative;
+    line-height: 1;
+}
+.countdown-unit .countdown-num{
+    font-size: 3rem;
+}
+.countdown-unit .countdown-word {
+    font-size: 1rem !important;
+}
+
+
+.dealtimer-countdown .day:after,
+.dealtimer-countdown .hour:after,
+.dealtimer-countdown .min:after {
+    content: ':';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -12px);
+    right: -15px;
+    font-size: 16px;
+}
+
+
+
+/* responsive */
+
+
+
+@media (max-width: 768px) {
+    .deal-timer .dealtimer-bg img {
+        height: 40rem;
+    }
+    .deal-timer-text .h1{
+        font-size: 45px;
+        line-height: 1;
+    } 
+}
+
+@media (max-width: 576px) {
+    .deal-timer .dealtimer-bg img {
+        height: 30rem;
+    }
+    .deal-timer-text .h1{
+        font-size: 25px;
+        line-height: 1;
+    } 
+}

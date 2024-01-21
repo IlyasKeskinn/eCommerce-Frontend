@@ -87,11 +87,13 @@
     padding: 0.2rem 1rem;
 
 }
-.card-drawer-title, .cart-drawer-info h3,p{
+.card-drawer-title p,
+.cart-drawer-info p,
+.card-drawer-title h3{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 150px; /* Maksimum genişlik belirleyin */
+    max-width: 150px; 
 }
 .cart-drawer-item-list .cart-drawer-info h3{
     font-size: 1.6rem;

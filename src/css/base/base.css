@@ -85,41 +85,6 @@ a {
     position: relative !important;
 }
 
-/* text */
-
-.text-secondary {
-    color: var(--light-gray);
-}
-
-.fw-normal {
-    font-weight: 500 !important;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-.text-lowercase {
-    text-transform: lowercase;
-}
-
-.text-capitalize {
-    text-transform: capitalize !important;
-}
-
-.text-underline {
-    text-decoration: underline;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* title */
-.section-title{
-    font-size: 3rem;
-}
-/* title */
 
 /* display */
 
