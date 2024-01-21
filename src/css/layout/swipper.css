@@ -3,20 +3,12 @@
     height: 100%;
 }
 
-.swiper-pagination{
-    color: red;
-}
 
 
 .swiper-pagination-bullet-active{
     background-color: black !important;
 }
 
-.swipper-controller {
-    position: absolute;
-    bottom: 14px;
-    left: 15px;
-}
 
 .swiper-pagination-bullet {
     position: relative !important;

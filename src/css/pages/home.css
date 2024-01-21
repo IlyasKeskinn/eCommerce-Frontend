@@ -63,6 +63,9 @@
     margin: 100px 0;
 }
 
+.instgram__section{
+    margin: 75px 0;
+}
 
 /* responsive */
 
@@ -75,6 +78,10 @@
     .grid-banner .collection-row {
         gap: 0;
     }
+    .instgram-area {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+
 
 }
 
@@ -88,6 +95,9 @@
     .deal-timer-text .h1 {
         font-size: 45px;
         line-height: 1;
+    }
+    .instgram-area {
+        grid-template-columns: 1fr 1fr !important;
     }
 
 
@@ -104,5 +114,7 @@
         line-height: 1;
     }
 
+    
+    
 
 }
