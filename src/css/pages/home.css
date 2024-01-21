@@ -66,6 +66,20 @@
 .instgram__section{
     margin: 75px 0;
 }
+.service-promotion{
+    margin-bottom: 50px;
+}
+.service-promotion__row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.service-promotion__title{
+    font-size: 2rem;
+}
+.col-md-4{
+    width: 100%;
+}
 
 /* responsive */
 
@@ -98,6 +112,10 @@
     }
     .instgram-area {
         grid-template-columns: 1fr 1fr !important;
+    }
+    .service-promotion__row{
+        grid-template-columns: 1fr;
+        row-gap: 80px;
     }
 
 
