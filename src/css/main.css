@@ -13,15 +13,27 @@
 /* header  */
 @import url(./layout/header.css);
 /* header  */
-/* header  */
+
+/* header mobile  */
 @import url(./layout/header-mobile.css);
-/* header  */
+/* header mobile  */
+
 /* slider */
 @import url(./components/slideshow.css);
 /* slider */
+
 /* collection */
 @import url(./layout/collection.css);
 /* collection */
+
+/* product card */
+@import url(./components/product-card.css);
+/* product card */
+
+/* products area */
+@import url(./layout/prorducts-area.css);
+/* products area */
+
 /* aside */
 @import url(./layout/aside.css);
 /* aside */

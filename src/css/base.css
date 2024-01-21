@@ -115,6 +115,12 @@ a {
     text-align: center;
 }
 
+/* title */
+.section-title{
+    font-size: 3rem;
+}
+/* title */
+
 /* display */
 
 .d-inline {

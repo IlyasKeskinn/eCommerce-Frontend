@@ -9,7 +9,7 @@
     content: "";
     bottom: -5px;
     left: 0;
-    height: 2px;
+    height: 1.5px;
     width: 0;
     background-color: var(--black);
     position: absolute;
@@ -26,7 +26,7 @@
     content: "";
     bottom: -5px;
     left: 0;
-    height: 2px;
+    height: 1.5px;
     width: 60%;
     background-color: var(--black);
     position: absolute;
@@ -70,7 +70,16 @@
     background-color: #e8e8e8;
     color: var(--black);
 }
+.btn-white{
+    background-color: var(--bg-white);
+    border: 1px solid var(--bg-white);
 
+    color: var(--black);
+    transition: all 0.3s ease-out;
+}
+.btn-white:hover{
+    border: 1px solid var(--black);
+}
 .aside-header-button {
     border: none;
     cursor: pointer;
