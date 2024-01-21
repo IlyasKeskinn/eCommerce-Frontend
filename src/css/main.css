@@ -45,4 +45,8 @@
 /* page-overlay */
 @import url(./layout/page-overlay.css);
 /* page-overlay */
-@import url(./base/typography.css)
+@import url(./base/typography.css);
+
+/* swipper */
+@import url(./layout/swipper.css);
+/* swipper */

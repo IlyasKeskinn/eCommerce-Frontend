@@ -32,9 +32,11 @@
     position: relative;
     line-height: 1;
 }
-.countdown-unit .countdown-num{
+
+.countdown-unit .countdown-num {
     font-size: 3rem;
 }
+
 .countdown-unit .countdown-word {
     font-size: 1rem !important;
 }
@@ -52,9 +54,29 @@
     font-size: 16px;
 }
 
+.limited-products {
+    margin: 100px 0;
+}
+
+.grid-banner {
+    height: 40rem;
+    margin: 100px 0;
+}
 
 
 /* responsive */
+
+
+@media (max-width : 992px) {
+    .grid-banner {
+        height: 60rem;
+    }
+
+    .grid-banner .collection-row {
+        gap: 0;
+    }
+
+}
 
 
 
@@ -62,23 +84,25 @@
     .deal-timer .dealtimer-bg img {
         height: 40rem;
     }
-    .deal-timer-text .h1{
+
+    .deal-timer-text .h1 {
         font-size: 45px;
         line-height: 1;
-    } 
+    }
+
+
+
 }
 
 @media (max-width: 576px) {
     .deal-timer .dealtimer-bg img {
         height: 30rem;
     }
-    .deal-timer-text .h1{
+
+    .deal-timer-text .h1 {
         font-size: 25px;
         line-height: 1;
-    } 
-}
+    }
 
-.grid-banner{
-    height: 40rem;
-    margin: 100px 0;
+
 }
