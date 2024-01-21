@@ -4,8 +4,11 @@
     color: var(--light-gray);
 }
 
-.text--black {
+.text-dark {
     color: var(--black);
+}
+.text-light{
+    color: var(--bg-white) !important;
 }
 
 /* text color */

@@ -77,3 +77,8 @@
         line-height: 1;
     } 
 }
+
+.grid-banner{
+    height: 40rem;
+    margin: 100px 0;
+}

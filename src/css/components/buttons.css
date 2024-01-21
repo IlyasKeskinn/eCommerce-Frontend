@@ -11,7 +11,7 @@
     left: 0;
     height: 1.5px;
     width: 0;
-    background-color: var(--black);
+    background-color: currentColor;
     position: absolute;
     transition: all 0.3s ease-out;
 }
@@ -28,7 +28,7 @@
     left: 0;
     height: 1.5px;
     width: 60%;
-    background-color: var(--black);
+    background-color: currentColor;
     position: absolute;
     transition: all 0.3s ease-out;
 }
