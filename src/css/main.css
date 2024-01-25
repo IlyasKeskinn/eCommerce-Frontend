@@ -60,3 +60,13 @@
 @import url(./layout/footer.css);
 
 /* footer */
+
+
+/* shop  */
+@import url(./layout/shopbanner.css);
+/* shop  */
+
+
+/* shop banner */
+@import url(./pages/shop.css);
+/* shop banner */

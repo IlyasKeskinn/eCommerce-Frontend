@@ -20,6 +20,9 @@
     width: 65%;
 
 }
+.btn-outlined-half.active::after {
+    width: 65%;
+}
 
 
 .btn-outlined::after {
