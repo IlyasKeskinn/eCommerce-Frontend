@@ -40,15 +40,17 @@ textarea {
     pointer-events: none;
     position: absolute !important;
     left: 10px ;
-    top: 10px ;
+    top: 50% ;
+    transform: translateY(-50%);
     transition: 100ms ease all;
 
 }
 
 input:focus~label,
+input:valid~label,
 textarea:focus~label,
 textarea:valid~label {
-    top: -14px;
+    top: -10%;
     color: var(--black);
     background-color: var(--bg-white);
     padding: 0 0.3rem 0 0.5rem;
