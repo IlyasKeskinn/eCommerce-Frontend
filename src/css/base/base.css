@@ -80,6 +80,10 @@ a {
 }
 
 
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
 
 
 
@@ -111,8 +115,11 @@ a {
     flex-direction: column;
 }
 
-.flew-row {
+.flex-row {
     flex-direction: row;
+}
+.flex-wrap{
+    flex-wrap: wrap !important;
 }
 
 /* justify-content */

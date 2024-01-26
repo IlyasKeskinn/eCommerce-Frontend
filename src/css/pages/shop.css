@@ -123,6 +123,7 @@
     margin: 0 7px 7px 0;
     padding: 8px 10px;
     border: 1px solid rgba(0, 0, 0, 0.80);
+    cursor: pointer;
 }
 
 .swatch-size.swatch_active {

@@ -135,3 +135,66 @@ select {
     line-height: inherit;
 }
 
+/* radio inputs */
+.swatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7px 7px 0;
+    width: 30px;
+    padding: 6px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]:checked + label{
+    border: 1px solid rgba(0, 0, 0, 0.90);
+}
+
+/* radio inputs */
+
+
+/* quantity control input */
+input[type="number" i] {
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.quantity-control{
+    height: 60px !important;
+    width : 100px !important;
+
+}
+.quantity-control__number{
+    height: 100%;
+    width: 100%;
+}
+.quantity-control__reduce{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    text-align: center;
+    width: 4rem;
+    cursor: pointer;
+}
+.quantity-control__increment{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    text-align: center;
+    width: 4rem;
+    cursor: pointer;
+}
+/* quantity control input */
