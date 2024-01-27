@@ -1,6 +1,9 @@
+
 .account-row {
     display: flex;
     flex-wrap: wrap;
+    margin: 70px 0;
+
 }
 
 .account-row .col-3 {
@@ -36,7 +39,36 @@
 
 .my-account__section .account-nav .account-nav-item .btn.active {
     color: #c32929 !important;
+    pointer-events: none;
 }
+
+
+.my-account__section table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(3, 3, 3, 0.15);
+}
+
+.my-account__section thead {
+    background-color: var(--gray);
+}
+
+.my-account__section tr {
+    border-bottom: 1px solid rgba(3, 3, 3, 0.15);
+    text-align: center;
+}
+
+.my-account__section th {
+    padding: 20px 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.my-account__section td {
+
+    padding: 20px 10px;
+}
+
 
 @media (max-width : 992px) {
     .my-account__section .container {
@@ -57,6 +89,7 @@
         width: 100%;
         margin-top: 20px;
     }
+
     .my-account__section .my-account__dashboard {
         width: 90%;
     }
