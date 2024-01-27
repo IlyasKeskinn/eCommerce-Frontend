@@ -32,7 +32,32 @@
     pointer-events: auto;
     opacity: 1;
 }
+.pc__removewhislist{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px ;
+    padding: 5px 5px;
+    background-color: white;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    opacity: 0;
+    border: none;
+    z-index: -50;
+    transition: all 0.2s ease-out;
+}
 
+.whislist-product:hover .pc__removewhislist{
+    z-index: 10;
+    pointer-events: auto;
+    opacity: 1;
+    cursor: pointer;
+}
+.whislist-product a{
+    pointer-events: none;
+}
 
 .product-card .pc-img__wrapper .pc__img {
     position: absolute;
