@@ -429,7 +429,7 @@
 
     <section class="d-flex justify-content-center align-items-center my-5">
         <div class="container cart-container">
-            <h3 class="page-title text-uppercase">Cart</h3>
+            <h3 class="page-title text-uppercase">SHIPPING AND CHECKOUT</h3>
             <div class="checkout-steps my-5">
                 <a href="#" class="checkout-steps__item active">
                     <span class="checkout-steps__item-number">01</span>
@@ -438,7 +438,7 @@
                         <em class="text-capitalize text-secondary">Manage Your Item List</em>
                     </span>
                 </a>
-                <a href="#" class="checkout-steps__item ">
+                <a href="#" class="checkout-steps__item active">
                     <span class="checkout-steps__item-number">02</span>
                     <span class="checkout-steps__item-text">
                         <span class="text-uppercase fw-normal">Shipping And Checkout</span>
@@ -453,279 +453,134 @@
                     </span>
                 </a>
             </div>
-            <div class="shopping-cart__container ">
-                <div class="shopping-cart__row">
-                    <div class="cart-table__wrapper">
-                        <table>
-                            <thead>
-                                <th style="width: 125px !important;">Product</th>
-                                <th></th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Subtotal</th>
-                                <th></th>
-                            </thead>
-                            <tbody>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_1-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal ">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_2-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_3-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_4-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="checkout-buttons d-flex my-5 justify-content-between align-items-center">
-                            <div class="cupon-apply_inputbutton d-flex justify-content-between align-items-center">
-                                <div class="group">
-                                    <input placeholder="Valid" type="text" id="cuponCodeText" name="cuponCodeText" value="" >
-                                    <label  for="cuponCodeText" class="custom-label">Cupon Code *</label>
+            <div class="checkout-cart__container ">
+                <form class="checkout-form">
+                    <div class="checkout-cart__row">
+                        <div class="billings-info__wrapper">
+                            <h3 class="seciton-title text-uppercase">BILLING DETAILS </h3>
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <div class="group">
+                                        <input type="text" id="firstnameTxt" name="firstnameTxt" required>
+                                        <label for="firstnameTxt" class="custom-label">First Name *</label>
+                                    </div>
                                 </div>
-                                <div class="button__wrapper ">
-                                    <button style="padding-right:30px; padding-left: 30px;"
-                                        class="text-uppercase button btn-primary  ">Apply Cupon</button>
+                                <div class="col-6">
+                                    <div class="group">
+                                        <input type="text" id="lastnameTxt" name="lastnameTxt " required>
+                                        <label for="lastnameTxt" class="custom-label">Last Name *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="companynameTxt" name="companynameTxt">
+                                        <label for="companynameTxt" class="custom-label">Company Name(Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="streetaddressTxt" name="streetaddressTxt" required>
+                                        <label for="streetaddressTxt" class="custom-label">Street Address *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="townTxt" name="townTxt" required>
+                                        <label for="townTxt" class="custom-label">Town / City *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="postalcodeTxt" name="postalcodeTxt" required>
+                                        <label for="postalcodeTxt" class="custom-label">Postcode / ZIP *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="provienceTxt" name="provienceTxt" required>
+                                        <label for="provienceTxt" class="custom-label">Province *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="phoneTxt" name="phoneTxt" required>
+                                        <label for="phoneTxt" class="custom-label">Phone *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="group">
+                                        <input type="text" id="mailTxt" name="mailTxt" required>
+                                        <label for="mailTxt" class="custom-label">Your Mail *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 input-check-box d-flex justify-content-start align-items-center">
+                                    <div style="width: 0 !important;" class="group dummy-box">
+                                        <label class="custom-label-checkbox" for="createAnAccountCheckbox">
+                                            <input type="checkbox" id="createAnAccountCheckbox">
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <span class="checkbox-label-text">CREATE AN ACCOUNT?</span>
+                                </div>
+                                <div class="col-12 my-5">
+                                    <div class="group">
+                                        <textarea type="text" id="ordernoteTxt" name="ordernoteTxt"></textarea>
+                                        <label for="ordernoteTxt" class="custom-label">Orders Note (Optional)</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="button__wrapper">
-                                <button style="padding-right:30px; padding-left: 30px;"
-                                    class="text-uppercase button btn-secondary  ">Update Cart</button>
+                        </div>
+                        <div class="shopping-cart__totals-wrapper">
+                            <div class="sticky-content">
+                                <div class="shopping-cart__totals">
+                                    <h3 class="fw-normal text-uppercase">Your Order</h3>
+                                    <table class="order-list-table">
+                                        <thead>
+                                            <th>Product</th>
+                                            <th>Subtotal</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Zessi Dresses x 2</td>
+                                                <td>$32.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kirby T-Shirt</td>
+                                                <td>$29.90</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th>Subtotal</th>
+                                            <td>$1300</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Shipping</th>
+                                            <td>
+                                                Free Shipping
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>VAT</th>
+                                            <td>$19</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Subtotal</th>
+                                            <td>$1300</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="button__wrapper my-5 ">
+                                    <button class="text-uppercase button btn-primary w-100">
+                                        Place Order
+                                    </button>
+                                </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="shopping-cart__totals-wrapper">
-                        <div class="sticky-content">
-                            <div class="shopping-cart__totals">
-                                <h3 class="fw-normal text-uppercase">Cart Totals</h3>
-                                <table>
-                                    <tr>
-                                        <th>Subtotal</th>
-                                        <td>$1300</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Shipping</th>
-                                        <td>
-                                            <div
-                                                class="input-check-box d-flex justify-content-start align-items-center">
-                                                <div class="group dummy-box">
-                                                    <label class="custom-label-checkbox" for="freeShipping">
-                                                        <input type="checkbox" id="freeShipping">
-                                                        <span></span>
-                                                    </label>
-                                                </div>
-                                                <span class="checkbox-label-text">Free shipping
-                                                </span>
-                                            </div>
-                                            <div
-                                                class="input-check-box d-flex justify-content-start align-items-center">
-                                                <div class="group dummy-box">
-                                                    <label class="custom-label-checkbox" for="flatrate">
-                                                        <input type="checkbox" id="flatrate">
-                                                        <span></span>
-                                                    </label>
-                                                </div>
-                                                <span class="checkbox-label-text">Flat rate: $49
-                                                </span>
-                                            </div>
-                                            <div
-                                                class="input-check-box d-flex justify-content-start align-items-center">
-                                                <div class="group dummy-box">
-                                                    <label class="custom-label-checkbox" for="localPickup">
-                                                        <input type="checkbox" id="localPickup">
-                                                        <span></span>
-                                                    </label>
-                                                </div>
-                                                <span class="checkbox-label-text">Local pickup: $8
-                                                </span>
-                                            </div>
-                                            <div>Shipping to AL.</div>
-                                            <div>
-                                                <a href="#" class="btn btn-outlined-half change-address">
-                                                    Change Address
-                                                </a>
-                                            </div>
-
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>VAT</th>
-                                        <td>$19</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Subtotal</th>
-                                        <td>$1300</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="button__wrapper my-5 ">
-                                <button class="text-uppercase button btn-primary w-100">
-                                    PROCEED TO CHECKOUT
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                </form>
             </div>
 
         </div>
@@ -750,6 +605,7 @@
                     <div class="group">
                         <input type="text" id="usernameTxt" name="usernameTxt">
                         <label for="usernameTxt" class="custom-label">Username or email *</label>
+
                     </div>
                     <div class="group">
                         <input type="password" id="usernameTxt" name="usernameTxt">
