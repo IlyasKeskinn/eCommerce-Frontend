@@ -69,6 +69,17 @@
     padding: 20px 10px;
 }
 
+.my-account__address-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-account__address-item{
+    width: 50%;
+    padding: 0 20px 0 0;
+}
+.my-account__address-item__title h6{
+    font-size: 1.6rem;
+}
 
 @media (max-width : 992px) {
     .my-account__section .container {
@@ -92,5 +103,9 @@
 
     .my-account__section .my-account__dashboard {
         width: 90%;
+    }
+    .my-account__address-item{
+        width: 100%;
+        padding: 0;
     }
 }
