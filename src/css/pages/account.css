@@ -1,0 +1,63 @@
+.account-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account-row .col-3 {
+    width: 25%;
+    flex: 0 0 auto;
+
+}
+
+.account-row .col-9 {
+    width: 75%;
+    flex: 0 0 auto;
+}
+
+.account-nav .account-nav-item {
+    padding: 15px 0;
+}
+
+.my-account__section .page-content {
+    vertical-align: top;
+}
+
+.my-account__section .my-account__dashboard {
+    width: 70%;
+}
+
+.my-account__section .my-account__dashboard p {
+    padding-bottom: 20px;
+}
+
+.my-account__section .my-account__dashboard a {
+    text-decoration: underline;
+}
+
+.my-account__section .account-nav .account-nav-item .btn.active {
+    color: #c32929 !important;
+}
+
+@media (max-width : 992px) {
+    .my-account__section .container {
+        width: 100vw;
+    }
+
+    .my-account__section .page-title,
+    .my-account__section .account-row {
+        padding: 0 20px;
+    }
+
+    .account-row .col-3 {
+        width: 100%;
+
+    }
+
+    .account-row .col-9 {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .my-account__section .my-account__dashboard {
+        width: 90%;
+    }
+}
