@@ -427,9 +427,9 @@
     </header>
     <!-- Header End -->
 
-    <section class="checkout-section d-flex justify-content-center align-items-center my-5">
+    <section class="shop-complete-section d-flex justify-content-center align-items-center my-5">
         <div class="container cart-container">
-            <h3 class="page-title text-uppercase">SHIPPING AND CHECKOUT</h3>
+            <h3 class="page-title text-uppercase">ORDER RECEIVED</h3>
             <div class="checkout-steps my-5">
                 <a href="#" class="checkout-steps__item active">
                     <span class="checkout-steps__item-number">01</span>
@@ -445,7 +445,7 @@
                         <em class="text-capitalize text-secondary">Checkout Your Item List</em>
                     </span>
                 </a>
-                <a href="#" class="checkout-steps__item ">
+                <a href="#" class="checkout-steps__item active ">
                     <span class="checkout-steps__item-number">03</span>
                     <span class="checkout-steps__item-text">
                         <span class="text-uppercase fw-normal">Confirmation</span>
@@ -453,134 +453,99 @@
                     </span>
                 </a>
             </div>
-            <div class="checkout-cart__container ">
-                <form class="checkout-form">
-                    <div class="checkout-cart__row">
-                        <div class="billings-info__wrapper">
-                            <h3 class="seciton-title text-uppercase">BILLING DETAILS </h3>
-                            <div class="form-row">
-                                <div class="col-6">
-                                    <div class="group">
-                                        <input type="text" id="firstnameTxt" name="firstnameTxt" required>
-                                        <label for="firstnameTxt" class="custom-label">First Name *</label>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="group">
-                                        <input type="text" id="lastnameTxt" name="lastnameTxt " required>
-                                        <label for="lastnameTxt" class="custom-label">Last Name *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="companynameTxt" name="companynameTxt">
-                                        <label for="companynameTxt" class="custom-label">Company Name(Optional)</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="streetaddressTxt" name="streetaddressTxt" required>
-                                        <label for="streetaddressTxt" class="custom-label">Street Address *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="townTxt" name="townTxt" required>
-                                        <label for="townTxt" class="custom-label">Town / City *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="postalcodeTxt" name="postalcodeTxt" required>
-                                        <label for="postalcodeTxt" class="custom-label">Postcode / ZIP *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="provienceTxt" name="provienceTxt" required>
-                                        <label for="provienceTxt" class="custom-label">Province *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="phoneTxt" name="phoneTxt" required>
-                                        <label for="phoneTxt" class="custom-label">Phone *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group">
-                                        <input type="text" id="mailTxt" name="mailTxt" required>
-                                        <label for="mailTxt" class="custom-label">Your Mail *</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 input-check-box d-flex justify-content-start align-items-center">
-                                    <div style="width: 0 !important;" class="group dummy-box">
-                                        <label class="custom-label-checkbox" for="createAnAccountCheckbox">
-                                            <input type="checkbox" id="createAnAccountCheckbox">
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <span class="checkbox-label-text">CREATE AN ACCOUNT?</span>
-                                </div>
-                                <div class="col-12 my-5">
-                                    <div class="group">
-                                        <textarea type="text" id="ordernoteTxt" name="ordernoteTxt"></textarea>
-                                        <label for="ordernoteTxt" class="custom-label">Orders Note (Optional)</label>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="shop-complete__container ">
+                <div class="shop-complete__wrapper">
+                    <div class="order-complete__msg d-flex justify-content-center align-items-center flex-column">
+                        <div class="order-complete__svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                            </svg>
                         </div>
-                        <div class="shopping-cart__totals-wrapper">
-                            <div class="sticky-content">
-                                <div class="shopping-cart__totals">
-                                    <h3 class="fw-normal text-uppercase">Your Order</h3>
-                                    <table class="order-list-table">
-                                        <thead>
-                                            <th>Product</th>
-                                            <th>Subtotal</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Zessi Dresses x 2</td>
-                                                <td>$32.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Kirby T-Shirt</td>
-                                                <td>$29.90</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table>
+                        <p class="fw-normal text-capitalize">Your order is completed!</p>
+                        <span class="text-capitalize text-secondary">Thank you. Your order has been received.</span>
+                    </div>
+                    <div class="order-complete__info">
+                        <div class="order-complete__info-item">
+                            <label class="text-secondary">
+                                Order Number
+                            </label>
+                            <span>
+                                13119
+                            </span>
+                        </div>
+                        <div class="order-complete__info-item">
+                            <label class="text-secondary">
+                                Date
+                            </label>
+                            <span>
+                                27/10/2023
+                            </span>
+                        </div>
+                        <div class="order-complete__info-item">
+                            <label class="text-secondary">
+                                Total
+                            </label>
+                            <span>
+                                $81.40
+                            </span>
+                        </div>
+                        <div class="order-complete__info-item">
+                            <label class="text-secondary">
+                                Paymetn Method
+                            </label>
+                            <span>
+                                Credit Card
+                            </span>
+                        </div>
+                    </div>
+                    <div class="shop__totals-wrapper">
+                        <div>
+                            <div class="shopping-cart__totals">
+                                <h3 class="fw-normal text-uppercase">Order Details</h3>
+                                <table class="order-list-table">
+                                    <thead>
+                                        <th>Product</th>
+                                        <th>Subtotal</th>
+                                    </thead>
+                                    <tbody>
                                         <tr>
-                                            <th>Subtotal</th>
-                                            <td>$1300</td>
+                                            <td>Zessi Dresses x 2</td>
+                                            <td>$32.50</td>
                                         </tr>
                                         <tr>
-                                            <th>Shipping</th>
-                                            <td>
-                                                Free Shipping
-                                            </td>
+                                            <td>Kirby T-Shirt</td>
+                                            <td>$29.90</td>
                                         </tr>
-                                        <tr>
-                                            <th>VAT</th>
-                                            <td>$19</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Subtotal</th>
-                                            <td>$1300</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="button__wrapper my-5 ">
-                                    <button class="text-uppercase button btn-primary w-100">
-                                        Place Order
-                                    </button>
-                                </div>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <th>Subtotal</th>
+                                        <td>$1300</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Shipping</th>
+                                        <td>
+                                            Free Shipping
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>VAT</th>
+                                        <td>$19</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Subtotal</th>
+                                        <td>$1300</td>
+                                    </tr>
+                                </table>
                             </div>
 
                         </div>
+
                     </div>
-                </form>
+                </div>
             </div>
 
         </div>
