@@ -8,12 +8,14 @@ textarea {
     width: 320px;
     background: none;
     color: var(--black);
-    font-size: 1.8rem;
-    padding: 10px 10px 10px 5px;
+    font-size: 1.2rem;
+    padding: 20px 10px 20px 10px;
     display: block;
     border-radius: 0;
     border: 1px solid var(--gray);
 }
+
+
 
 input::placeholder,
 textarea::placeholder {
