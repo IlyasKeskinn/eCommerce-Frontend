@@ -6,6 +6,8 @@ const UIControl = (function () {
         navigationMenu: ".mobile-navigation-menu",
         navigationLink: ".navigation-link",
         backMenu: ".js-back-menu",
+        cartBtn: ".header-tools__cart",
+
 
 
     }
@@ -17,7 +19,6 @@ const UIControl = (function () {
         mobileMenuControl: function () {
             const bodyTag = document.querySelector(Selectors.body);
             if (bodyTag.classList.contains("mobile-menu-opened") == false) {
-
                 //open menu 
                 bodyTag.classList.add("mobile-menu-opened");
                 //change menuBtn
@@ -61,7 +62,7 @@ const UIControl = (function () {
 
 })();
 
-const HeaderControl = (function name(UICtrl) {
+const HeaderControl = (function (UICtrl) {
     const UISelectors = UICtrl.getSelectors();
 
     const loadEventListener = function () {
@@ -81,7 +82,7 @@ const HeaderControl = (function name(UICtrl) {
 
 })(UIControl)
 
-const NavigationControl = (function name(UICtrl) {
+const NavigationControl = (function (UICtrl) {
     const UISelectors = UICtrl.getSelectors();
 
     const loadEventListener = function () {
