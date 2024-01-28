@@ -15,14 +15,14 @@
     z-index: 1500;
     height: 0;
     max-height: 0;
-    transition: all 1s ease-out;
+    transition: all 0.2s ease-out;
     display: none;
 
 }
 .mobile-menu-opened .header-mobile__navigation {
     height:calc(100vh - 100%) !important;
     max-height: calc(100vh - 100%);
-    transition: all 1s ease-out;
+    transition: all 0.2s ease-out;
     display: flex !important;
 }
 

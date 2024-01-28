@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="mobile-menu-opened!">
+<body>
     <!-- Mobile Header Start -->
     <div class="header-mobile header_sticky position-relative  d-flex justify-content-center align-items-center">
         <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -53,13 +53,57 @@
                 <div class="container">
                     <div class="overflow-hidden">
                         <!-- active class is show sub menu -->
-                        <ul class="mobile-navigation-menu position-relative active! ">
+                        <ul class="mobile-navigation-menu position-relative ">
                             <li class="navigation-item">
                                 <a href="#" class="navigation-link ">Home</a>
                             </li>
 
                             <li class="navigation-item">
-                                <a href="#" class="navigation-link">Shop</a>
+                                <a href="#"
+                                    class="navigation-link js-nav-right d-flex align-items-center justify-content-between">Shop
+                                    <i class="bi bi-chevron-right me-5"></i>
+                                </a>
+                                <div class="mobile-sub-menu__wrapper d-none ">
+                                    <ul class="default-menu-content">
+                                        <li class="sub-menu__item js-back-menu mt-3 d-flex align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                            </svg>
+                                            <a href="#" class="menu-title">
+                                                <h4 class="mega-menu-title">Shop</h4>
+                                            </a>
+                                        </li>
+                                        <hr class="divider text-secondary mb-3">
+
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">404 Page</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link">Login / Register</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Store Locator</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Lookbook</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Faq</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Term</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">404 Errors</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Comming Soon</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </li>
                             <li class="navigation-item  ">
                                 <a href="#"
@@ -68,15 +112,15 @@
                                     <i class="bi bi-chevron-right me-5"></i>
 
                                 </a>
-                                <div class="mobile-sub-menu__wrapper ">
-                                    <ul class="default-menu-content">
-                                        <li class="sub-menu__item mt-3 d-flex align-items-center">
+                                <div class="mobile-sub-menu__wrapper d-none ">
+                                    <ul class="default-menu-content ">
+                                        <li class="sub-menu__item js-back-menu mt-3 d-flex align-items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd"
                                                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                                             </svg>
-                                            <a href="#" class="menu-title">
+                                            <a href="#" class="menu-title js-back-menu">
                                                 <h4 class="mega-menu-title">Home</h4>
                                             </a>
                                         </li>
@@ -2122,47 +2166,10 @@
     </footer>
 
 
+
+    <script type="module" src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-
-        var swiper = new Swiper(".mySwiper", {
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            loop: true,
-            direction: 'horizontal',
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
-                },
-            },
-        });
-
-
-    </script>
+    <script type="module" src="js/swiper.js"></script>
 
 </body>
 

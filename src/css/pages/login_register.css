@@ -18,6 +18,11 @@
 .login-register-section .form input{
     width: 100%;
 }
+.login-register-section .nav-item a{
+    font-size: 1.8rem;
+}
+
+
 .login-register-section .button{
     padding: 20px 20px;
 }
