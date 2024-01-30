@@ -9,7 +9,6 @@ const UIControl = (function () {
         cartBtn: ".header-tools__cart",
 
 
-
     }
 
     return {
@@ -56,8 +55,7 @@ const UIControl = (function () {
             //display none sub-menu
             e.target.parentElement.parentElement.parentElement.parentElement.classList.remove("d-block");
             e.target.parentElement.parentElement.parentElement.parentElement.classList.add("d-none");
-        }
-
+        },
     }
 
 })();

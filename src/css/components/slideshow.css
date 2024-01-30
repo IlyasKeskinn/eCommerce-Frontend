@@ -33,19 +33,45 @@
     bottom: 0 !important;
     height: 90%;
     max-height: 90%;
+    opacity: 0 !important;
+    visibility: hidden;
+    transition:all  0.3s ease-in;
+
+
 }
 
-.slide-show-character img {
+.slide-show-character__img {
     height: 100%;
     object-fit: cover;
+ 
+}
+
+.slide-show-character.active {
+    opacity: 1 !important;
+    visibility: visible;
 }
 
 .slide-show-text {
     position: absolute;
-    left: 50% !important;
-    top: 50% !important;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%) !important;
+    opacity: 0 !important;
+    visibility: hidden;
+    /* display: none; */
+    transition: all 0.3s ease-in;
 }
+
+.slide-show-text.active {
+    opacity: 1 !important;
+    visibility: visible;
+    /* display: block; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) !important;
+
+}
+
 
 
 
