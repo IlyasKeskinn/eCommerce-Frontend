@@ -32,6 +32,10 @@
     pointer-events: auto;
     opacity: 1;
 }
+
+.product-card:hover img{
+    opacity: 0.8;
+}
 .pc__removewhislist{
     position: absolute;
     display: flex;

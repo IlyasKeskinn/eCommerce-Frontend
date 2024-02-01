@@ -3,6 +3,7 @@
     color: var(--light-gray);
     font-weight: 500;
     transition: all 0.3s ease-out;
+    cursor: pointer;
 }
 
 .nav-link:hover {
@@ -45,15 +46,6 @@
 }
 
 
-.tab-pane .active {
-    display: block;
-
-}
-
-.tab-content .fade {
-    transition: all 0.3s ease-out;
-
-}
 
 .row {
 
