@@ -8,8 +8,7 @@ const UIControl = (function () {
         profileBtn: ".header-tools__profile",
         closeBtn: "bi-x",
         searchDiv: ".js-content-visible",
-        navTab: ".nav-tab",
-        tabContent: ".tab-content"
+       
     }
 
     return {
@@ -51,38 +50,6 @@ const UIControl = (function () {
                 searchBtn.classList.remove("bi-x")
                 searchBtn.classList.add("bi-search")
             }
-        },
-        tapPaneActive: function (e) {
-            const navs = document.querySelector(Selectors.navTab).children;
-            const tabs = document.querySelector(Selectors.tabContent).children;
-            const triggerId = e.target.getAttribute("id");
-
-            Array.from(navs).forEach(nav => {
-                if (nav.children[0].getAttribute("id") == triggerId) {
-                    e.target.classList.add("active");
-
-                    Array.from(tabs).forEach(tab => {
-                        if (tab.getAttribute("aria-labelledby") == triggerId) {
-                            tab.classList.add("active");
-                        } else {
-                            if (tab.classList.contains("active")) {
-                                tab.classList.remove("active");
-                            }
-                        }
-                    });
-
-                } else {
-                    nav.children[0].classList.remove("active");
-
-                }
-            });
-
-            // if (!e.target.classList.contains("active")) {
-            //     e.target.classList.add("active");
-            //     console.log(document.querySelector(Selectors.navTab).children
-            //     )
-            // }
-
         }
     }
 })()
@@ -92,7 +59,6 @@ const App = (function (UICtrl) {
 
     const loadEventListener = function () {
         const shopCartButtons = document.querySelectorAll(UISelectors.cartBtn)
-        const navsItem = document.querySelector(UISelectors.navTab).children;
 
         shopCartButtons.forEach(btn => {
             btn.addEventListener("click", showCartAside);
@@ -103,10 +69,7 @@ const App = (function (UICtrl) {
 
         document.querySelector(UISelectors.searchDiv).children[0].addEventListener("click", showSearchDiv)
 
-        //home product area
-        Array.from(navsItem).forEach(nav => {
-            nav.addEventListener("click", tapPaneActive)
-        });
+    
 
     }
 
@@ -124,9 +87,7 @@ const App = (function (UICtrl) {
     const showSearchDiv = function () {
         UICtrl.showSearchArea();
     }
-    const tapPaneActive = function (e) {
-        UICtrl.tapPaneActive(e);
-    }
+
 
     return {
         init: function () {
@@ -139,4 +100,8 @@ function asideControl() {
     App.init();
 }
 
-export default asideControl();
+export { UIControl };
+
+
+export default  asideControl() ;
+

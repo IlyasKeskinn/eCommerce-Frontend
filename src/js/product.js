@@ -1,4 +1,6 @@
 function productsFunc() {
+    let products = JSON.parse(localStorage.getItem("products")) ? JSON.parse(localStorage.getItem("products")) : [];
+
 
     const productListAll = document.querySelector(".product-list");
     const productListNew = document.querySelector(".new-product-list");
@@ -6,7 +8,6 @@ function productsFunc() {
     const productListTop = document.querySelector(".top-product-list");
     const limitedProductList = document.querySelector(".limited-product-list");
 
-    const products = JSON.parse(localStorage.getItem("products"));
 
     const generatedProduct = function (product) {
 
@@ -16,7 +17,7 @@ function productsFunc() {
             <a href="#">
                 <img  src="./img/product${product.img}" alt="" class="pc__img ">
             </a>
-            <button class="pc_addcart button btn-white w-50" id="addToCart">Add Cart</button>
+            <button data-id="${product.id}" class="pc__addcart button btn-white w-50" id="addToCart">Add Cart</button>
         </div>
         <div class="pc-info position-relative mt-3 p-1">
             <p class="text-secondary pc__category">Dressers</p>
@@ -26,7 +27,7 @@ function productsFunc() {
                 </a>
             </h6>
             <div class="d-flex product-card__price">
-                <span class="money price">${product.price}</span>
+                <span class="money price">$${product.price}</span>
             </div>
             <div class="product-card__review d-flex align-items-center justify-content center">
                     <div class="review-stars-group me-1 d-flex align-items-center ">
@@ -77,10 +78,10 @@ function productsFunc() {
 
     let productCards = '';
     let limitedProduct = '';
-    let newProduct ='';
+    let newProduct = '';
     let bestProduct = '';
     let topProduct = '';
-    products.forEach(product => {
+    products.forEach((product, index) => {
         productCards += generatedProduct(product)
             ;
 
@@ -98,7 +99,7 @@ function productsFunc() {
             bestProduct += generatedProduct(product);
         }
         if (product.price > 35) {
-           topProduct += generatedProduct(product);
+            topProduct += generatedProduct(product);
         }
     }
     );
@@ -111,9 +112,14 @@ function productsFunc() {
     productListTop.innerHTML = topProduct;
     limitedProductList.innerHTML = limitedProduct;
 
-
-
 }
 
+async function getProducts() {
 
-export default productsFunc();
+    const data = await fetch('./js/products.json');
+    const products = await data.json();
+    products ? localStorage.setItem("products", JSON.stringify(products)) : [];
+}   
+getProducts();
+
+productsFunc();

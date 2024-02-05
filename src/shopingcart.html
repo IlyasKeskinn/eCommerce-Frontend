@@ -18,19 +18,24 @@
 
 </head>
 
-<body class="mobile-menu-opened!">
+<body id="shopping-page">
     <!-- Mobile Header Start -->
     <div class="header-mobile header_sticky position-relative  d-flex justify-content-center align-items-center">
         <div class="container position-relative d-flex align-items-center justify-content-between">
             <a href="#" class="d-block mobile-menu__activator">
                 <i class="bi bi-list"></i>
             </a>
+           <a href="index.html">
             <div class="logo">
                 <h1>Zephyra</h1>
             </div>
+           </a>
             <a href="#" class="header-tools__item header-tools__cart">
-                <i class="bi bi-bag"></i>
-                <span class="cart-amount">3</span>
+                <i class="bi bi-bag">
+                    <span class="cart-amount">
+                        0
+                    </span>
+                </i>
             </a>
         </div>
         <nav
@@ -53,13 +58,57 @@
                 <div class="container">
                     <div class="overflow-hidden">
                         <!-- active class is show sub menu -->
-                        <ul class="mobile-navigation-menu position-relative active! ">
+                        <ul class="mobile-navigation-menu position-relative ">
                             <li class="navigation-item">
                                 <a href="#" class="navigation-link ">Home</a>
                             </li>
 
                             <li class="navigation-item">
-                                <a href="#" class="navigation-link">Shop</a>
+                                <a href="#"
+                                    class="navigation-link js-nav-right d-flex align-items-center justify-content-between">Shop
+                                    <i class="bi bi-chevron-right me-5"></i>
+                                </a>
+                                <div class="mobile-sub-menu__wrapper d-none ">
+                                    <ul class="default-menu-content">
+                                        <li class="sub-menu__item js-back-menu mt-3 d-flex align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                            </svg>
+                                            <a href="#" class="menu-title">
+                                                <h4 class="mega-menu-title">Shop</h4>
+                                            </a>
+                                        </li>
+                                        <hr class="divider text-secondary mb-3">
+
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">404 Page</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link">Login / Register</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Store Locator</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Lookbook</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Faq</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Term</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">404 Errors</a>
+                                        </li>
+                                        <li class="sub-menu__item  mb-3">
+                                            <a href="#" class="menu-link ">Comming Soon</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </li>
                             <li class="navigation-item  ">
                                 <a href="#"
@@ -68,15 +117,15 @@
                                     <i class="bi bi-chevron-right me-5"></i>
 
                                 </a>
-                                <div class="mobile-sub-menu__wrapper ">
-                                    <ul class="default-menu-content">
-                                        <li class="sub-menu__item mt-3 d-flex align-items-center">
+                                <div class="mobile-sub-menu__wrapper d-none ">
+                                    <ul class="default-menu-content ">
+                                        <li class="sub-menu__item js-back-menu mt-3 d-flex align-items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd"
                                                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                                             </svg>
-                                            <a href="#" class="menu-title">
+                                            <a href="#" class="menu-title js-back-menu">
                                                 <h4 class="mega-menu-title">Home</h4>
                                             </a>
                                         </li>
@@ -187,7 +236,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="#">
+                    <a href="index.html">
                         <h1>Zephyra</h1>
                     </a>
                 </div>
@@ -356,9 +405,9 @@
                 <div class="header-tools">
                     <div class="header-tools__item js-content-visible">
                         <a href="#">
-                            <i class="bi bi-search"></i>
+                            <i style="font-size: 22px;" class="bi bi-search"></i>
                         </a>
-                        <div class="search-popup js-hidden-content">
+                        <div class="search-popup js-hidden-content ">
                             <div class="container">
                                 <div class="popup-items">
                                     <form action="">
@@ -408,19 +457,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header-tools__item">
-                        <a href="#">
-                            <i class="bi bi-person"></i>
-                        </a>
-                    </div>
+                    <a href="#" class="header-tools__profile">
+                        <i class="bi bi-person"></i>
+                    </a>
                     <a href="#" class="header-tools__item">
                         <i class="bi bi-heart"></i>
                     </a>
                     <a href="#" class="header-tools__item header-tools__cart">
-                        <i class="bi bi-bag"></i>
-                        <span class="cart-amount">3</span>
+                        <i class="bi bi-bag">
+                            <span class="cart-amount">0</span>
+                        </i>
                     </a>
-
                 </div>
             </div>
         </div>
@@ -465,182 +512,17 @@
                                 <th>Subtotal</th>
                                 <th></th>
                             </thead>
-                            <tbody>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_1-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal ">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_2-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_3-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="cart-table-row">
-                                    <td>
-                                        <div class="position-relative cart-drawer-img-wrapper">
-                                            <img src="./img/product/product_4-1.jpg" alt=""
-                                                class="cart-item-img img-fluid">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="cart-drawer-info">
-                                            <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                            </h3>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Color: Yellow
-                                            </p>
-                                            <p class="cart-drawer-option text-secondary">
-                                                Size: L
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td> <span class="shopping-cart__product-price text-secondary">$49</span>
-                                    </td>
-                                    <td>
-                                        <div class="quantity-control position-relative">
-                                            <input type="number" name="quantity"
-                                                class="quantity-control__number text-center" value="1" min="1">
-                                            <a class="quantity-control__reduce">-</a>
-                                            <div class="quantity-control__increment">+</div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="shopping-cart__subtotal">$449</span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="remove-cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tbody class="cart-item-list">
+                               
+                            
                             </tbody>
                         </table>
                         <div class="checkout-buttons d-flex my-5 justify-content-between align-items-center">
                             <div class="cupon-apply_inputbutton d-flex justify-content-between align-items-center">
                                 <div class="group">
-                                    <input placeholder="Valid" type="text" id="cuponCodeText" name="cuponCodeText" value="" >
-                                    <label  for="cuponCodeText" class="custom-label">Cupon Code *</label>
+                                    <input placeholder="Cupon Code" type="text" id="cuponCodeText" name="cuponCodeText"
+                                        value="">
+                                    <label for="cuponCodeText" class="custom-label">Cupon Code *</label>
                                 </div>
                                 <div class="button__wrapper ">
                                     <button style="padding-right:30px; padding-left: 30px;"
@@ -660,7 +542,7 @@
                                 <table>
                                     <tr>
                                         <th>Subtotal</th>
-                                        <td>$1300</td>
+                                        <td class="sub-total-number">$0</td>
                                     </tr>
                                     <tr>
                                         <th>Shipping</th>
@@ -713,7 +595,7 @@
                                     </tr>
                                     <tr>
                                         <th>Subtotal</th>
-                                        <td>$1300</td>
+                                        <td class="sub-total-number">$0</td>
                                     </tr>
                                 </table>
                             </div>
@@ -731,9 +613,8 @@
         </div>
     </section>
 
-
     <!-- Customer Login Form Start -->
-    <aside class="aside aside-right aside-visible!" id="customerForms">
+    <aside class="aside aside-right" id="customerForms">
         <div class="customer-login__wraper position-relative d-flex justify-content-center">
             <div class="customer-login w-85">
                 <!-- Customer Login Header -->
@@ -750,6 +631,7 @@
                     <div class="group">
                         <input type="text" id="usernameTxt" name="usernameTxt">
                         <label for="usernameTxt" class="custom-label">Username or email *</label>
+
                     </div>
                     <div class="group">
                         <input type="password" id="usernameTxt" name="usernameTxt">
@@ -758,8 +640,8 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="input-check-box d-flex justify-content-start align-items-center">
                             <div class="group dummy-box">
-                                <label class="custom-label-checkbox" for="rememberMe">
-                                    <input type="checkbox" id="rememberMe">
+                                <label class="custom-label-checkbox" for="customCheckbox">
+                                    <input type="checkbox" id="customCheckbox">
                                     <span></span>
                                 </label>
                             </div>
@@ -781,13 +663,13 @@
     </aside>
     <!-- Customer Login Form End -->
 
-    <aside class="aside aside-right aside-visible!" id="shopingCartAside">
+    <aside class="aside aside-right" id="shopingCartAside">
         <div class="shopping-cart__wraper position-relative d-flex justify-content-center">
             <div class="shopping-cart w-95">
                 <!-- Shopping Cart Header -->
                 <div class="aside-header  d-flex align-items-center justify-content-between">
                     <h3 class="aside-title text-uppercase fw-normal">
-                        SHOPPING BAG <span class="shoping-cart-amount">( 1 )</span>
+                        SHOPPING BAG <span class="shoping-cart-amount">( 0 )</span>
                     </h3>
                     <button class="aside-header-button">
                         <i class="bi bi-x"></i>
@@ -797,116 +679,7 @@
                 <div class="aside-content">
                     <!-- Shopping Cart Items -->
                     <div class="cart-drawer-item-list">
-                        <div class="cart-drawer-item d-flex position-relative">
-                            <div class="position-relative cart-drawer-img-wrapper">
-                                <img src="./img/product/product_1-1.jpg" alt="" class="cart-item-img">
-                            </div>
-                            <div class="cart-drawer-info">
-                                <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                </h3>
-                                <p class="cart-drawer-option text-secondary">
-                                    Color: Yellow
-                                </p>
-                                <p class="cart-drawer-option text-secondary">
-                                    Size: L
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="quantity-control">
-                                        <button href="#">-</button>
-                                        <span href="#">1</span>
-                                        <button href="#">+</button>
-                                    </div>
-                                    <span>$89</span>
-                                </div>
-                            </div>
-                            <button class="aside-content-button cart-drawer-remove-btn">
-                                <i class="bi bi-x"></i>
-                            </button>
-                        </div>
-                        <hr class="divider text-secondary">
-
-                        <div class="cart-drawer-item d-flex position-relative">
-                            <div class="position-relative cart-drawer-img-wrapper">
-                                <img src="./img/product/product_2-1.jpg" alt="" class="cart-item-img">
-                            </div>
-                            <div class="cart-drawer-info">
-                                <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                </h3>
-                                <p class="cart-drawer-option text-secondary">
-                                    Color: Yellow
-                                </p>
-                                <p class="cart-drawer-option text-secondary">
-                                    Size: L
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="quantity-control">
-                                        <button href="#">-</button>
-                                        <span href="#">1</span>
-                                        <button href="#">+</button>
-                                    </div>
-                                    <span>$89</span>
-                                </div>
-                            </div>
-                            <button class="aside-content-button cart-drawer-remove-btn">
-                                <i class="bi bi-x"></i>
-                            </button>
-                        </div>
-                        <hr class="divider text-secondary">
-
-                        <div class="cart-drawer-item d-flex position-relative">
-                            <div class="position-relative cart-drawer-img-wrapper">
-                                <img src="./img/product/product_3-1.jpg" alt="" class="cart-item-img">
-                            </div>
-                            <div class="cart-drawer-info">
-                                <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                </h3>
-                                <p class="cart-drawer-option text-secondary">
-                                    Color: Yellow
-                                </p>
-                                <p class="cart-drawer-option text-secondary">
-                                    Size: L
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="quantity-control">
-                                        <button href="#">-</button>
-                                        <span href="#">1</span>
-                                        <button href="#">+</button>
-                                    </div>
-                                    <span>$89</span>
-                                </div>
-                            </div>
-                            <button class="aside-content-button cart-drawer-remove-btn">
-                                <i class="bi bi-x"></i>
-                            </button>
-                        </div>
-                        <hr class="divider text-secondary">
-
-                        <div class="cart-drawer-item d-flex position-relative">
-                            <div class="position-relative cart-drawer-img-wrapper">
-                                <img src="./img/product/product_4-1.jpg" alt="" class="cart-item-img">
-                            </div>
-                            <div class="cart-drawer-info">
-                                <h3 class="card-drawer-title fw-normal ">Zessi Dresses
-                                </h3>
-                                <p class="cart-drawer-option text-secondary">
-                                    Color: Yellow
-                                </p>
-                                <p class="cart-drawer-option text-secondary">
-                                    Size: L
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="quantity-control">
-                                        <button href="#">-</button>
-                                        <span href="#">1</span>
-                                        <button href="#">+</button>
-                                    </div>
-                                    <span>$89</span>
-                                </div>
-                            </div>
-                            <button class="aside-content-button cart-drawer-remove-btn">
-                                <i class="bi bi-x"></i>
-                            </button>
-                        </div>
+                        
                     </div>
                     <!-- Shopping Cart Items -->
                     <!-- Shopping Actions -->
@@ -914,11 +687,11 @@
                         <hr class="divider text-secondary">
                         <div class="cart-total d-flex justify-content-between align-items-center">
                             <p class="fw-normal text-uppercase">Subtotal: </p>
-                            <p>200$</p>
+                            <p class="sub-total-number">0$</p>
                         </div>
                         <div class="buttonwrapper">
-                            <button class="button btn-secondary w-100">View Cart</button>
-                            <button class="button btn-primary w-100">Checkout</button>
+                            <a href="shopingcart.html" class="button btn-secondary w-100">View Cart</a>
+                            <a href="shop_checkout.html" class="button btn-primary w-100">Checkout</a>
                         </div>
                     </div>
                     <!-- Shopping Actions -->
@@ -927,7 +700,8 @@
             </div>
         </div>
     </aside>
-    <div class="page-overlay page-overlay-visible!"></div>
+    <div class="page-overlay"></div>
+
 
 
     <footer class="footer d-flex flex-column align-items-center justify-content-center mt-5">
@@ -1092,6 +866,7 @@
     </footer>
 
 
+    <script type="module" src="js/main.js"></script>
 
 
 </body>

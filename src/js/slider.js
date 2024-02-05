@@ -62,5 +62,4 @@ function slide() {
     });
 
 }
-
-export default slide();
+slide();

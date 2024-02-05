@@ -114,6 +114,7 @@
 }
 .cart-drawer-remove-btn i{
     font-size: 2.4rem;
+    pointer-events: none;
 }
 
 .cart-drawer-divider{
@@ -130,7 +131,7 @@
 .aside .cart-total{
     margin: 1rem 0;
 }
-.aside .buttonwrapper button{
+.aside .buttonwrapper a{
     margin: 0.7rem 0;
 }
 

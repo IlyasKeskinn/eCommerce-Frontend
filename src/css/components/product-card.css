@@ -14,7 +14,7 @@
 
 }
 
-.pc_addcart{
+.pc__addcart{
     width: 95%;
     position: absolute;
     bottom: 20px;
@@ -26,7 +26,7 @@
     border-radius: 5px;
     transition: all 0.2s ease-out;
 }
-.product-card:hover .pc_addcart{
+.product-card:hover .pc__addcart{
    
     z-index: 10;
     pointer-events: auto;
