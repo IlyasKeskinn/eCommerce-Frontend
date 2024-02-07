@@ -4,8 +4,8 @@
         "product_name": "Cropped Faux Leather Jacket",
         "category": "Dresses",
         "price": 29,
-        "color": "yellow",
-        "size": "xl",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_1.jpg"
     },
     {
@@ -13,8 +13,8 @@
         "product_name": "Calvin Shorts",
         "category": "Dresses",
         "price": 62,
-        "color": "red",
-        "size": "s",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_2.jpg"
     },
     {
@@ -22,8 +22,8 @@
         "product_name": "Kirby T-Shirt",
         "category": "Dresses",
         "price": 17,
-        "color": "blue",
-        "size": "m",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_3.jpg"
     },
     {
@@ -31,8 +31,8 @@
         "product_name": "Cableknit Shawl",
         "category": "Dresses",
         "price": 99,
-        "color": "green",
-        "size": "l",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_4.jpg"
     },
     {
@@ -40,8 +40,8 @@
         "product_name": "Colorful Jacket",
         "category": "Dresses",
         "price": 39,
-        "color": "purple",
-        "size": "s",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_5.jpg"
     },
     {
@@ -49,8 +49,8 @@
         "product_name": "Shirt In Botanical Cheetah Print",
         "category": "Dresses",
         "price": 67,
-        "color": "orange",
-        "size": "xl",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_6.jpg"
     },
     {
@@ -58,8 +58,8 @@
         "product_name": "Cotton Jersey T-Shirt",
         "category": "Dresses",
         "price": 49,
-        "color": "pink",
-        "size": "m",
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"],
         "img": "/product_7.jpg"
     },
     {
@@ -68,7 +68,7 @@
         "category": "Dresses",
         "price": 19,
         "img": "/product_8.jpg",
-        "color": "brown",
-        "size": "l"
+        "color_options": ["purple", "yellow" ,"black"],
+        "size_options": ["xs", "s" ,"m", "l" , "xl"]
     }
 ]

@@ -131,7 +131,7 @@ const CartController = (function () {
                 });
 
             } else {
-                prd = { ...findProduct, "amount": 1 };
+                prd = { ...findProduct, "amount": 1, "selected_size": findProduct.size_options[0], "selected_color": findProduct.color_options[0] };
                 data.cart.push(prd);
 
             }
@@ -266,10 +266,10 @@ const UIController = (function () {
                     <h3 class="card-drawer-title fw-normal ">${cartItems.product_name} (${cartItems.amount})
                     </h3>
                     <p class="cart-drawer-option text-secondary text-capitalize">
-                        Color: ${cartItems.color}
+                        Color: ${cartItems.selected_color}
                     </p>
                     <p class="cart-drawer-option text-uppercase text-secondary">
-                        Size: ${cartItems.size}
+                        Size: ${cartItems.selected_size}
                     </p>
                     <span>$${CartController.productTotal(cartItems)} </span>
                 </div>
@@ -296,10 +296,10 @@ const UIController = (function () {
                         <h3 class="card-drawer-title text-capitalize fw-normal ">${cartItem.product_name}
                         </h3>
                         <p class="cart-drawer-option text-capitalize text-secondary">
-                            Color: ${cartItem.color}
+                            Color: ${cartItem.selected_color}
                         </p>
                         <p class="cart-drawer-option text-uppercase text-secondary">
-                            Size: ${cartItem.size}
+                            Size: ${cartItem.selected_size}
                         </p>
                     </div>
                 </td>
