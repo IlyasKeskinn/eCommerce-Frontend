@@ -1,20 +1,12 @@
 function productsFunc() {
     let products = JSON.parse(localStorage.getItem("products")) ? JSON.parse(localStorage.getItem("products")) : [];
 
-
-    const productListAll = document.querySelector(".product-list");
-    const productListNew = document.querySelector(".new-product-list");
-    const productListBest = document.querySelector(".best-product-list");
-    const productListTop = document.querySelector(".top-product-list");
-    const limitedProductList = document.querySelector(".limited-product-list");
-
-
     const generatedProduct = function (product) {
 
         return `
         <div class="product-card">
         <div class="pc-img__wrapper">
-            <a href="#">
+            <a href="#" data-id="${product.id}" class="product-link">
                 <img  src="./img/product${product.img}" alt="" class="pc__img ">
             </a>
             <button data-id="${product.id}" class="pc__addcart button btn-white w-50" id="addToCart">Add Cart</button>
@@ -22,7 +14,7 @@ function productsFunc() {
         <div class="pc-info position-relative mt-3 p-1">
             <p class="text-secondary pc__category">Dressers</p>
             <h6 class="pc__title">
-                <a href="#">
+                <a href="#" data-id="${product.id}" class="product-link">
                     ${product.product_name}
                 </a>
             </h6>
@@ -70,10 +62,8 @@ function productsFunc() {
                 </button>
             </div>
 </div>
-    
         `
     }
-
 
 
     let productCards = '';
@@ -103,23 +93,63 @@ function productsFunc() {
         }
     }
     );
+    function showAllProduct() {
+        const productListAll = document.querySelector(".product-list");
+        const productListNew = document.querySelector(".new-product-list");
+        const productListBest = document.querySelector(".best-product-list");
+        const productListTop = document.querySelector(".top-product-list");
+        if (document.querySelector(".products-area")) {
+            productListAll.innerHTML = productCards;
+            productListNew.innerHTML = newProduct;
+            productListBest.innerHTML = bestProduct;
+            productListTop.innerHTML = topProduct;
+        }
 
+    }
 
+    function showLimitedProducts() {
+        const limitedProductList = document.querySelector(".limited-product-list");
 
-    productListAll.innerHTML = productCards;
-    productListNew.innerHTML = newProduct;
-    productListBest.innerHTML = bestProduct;
-    productListTop.innerHTML = topProduct;
-    limitedProductList.innerHTML = limitedProduct;
+        if (document.querySelector(".limited-products")) {
+            limitedProductList.innerHTML = limitedProduct;
+        }
+    }
+    showAllProduct();
+    showLimitedProducts();
+}
+
+function routeProductDetails() {
+    const productLinkButtons = document.querySelectorAll(".product-link");
+    let selectedProductID;
+    let localStorageProduct = localStorage.getItem("productId") ? JSON.parse(localStorage.getItem("productId")) : [];
+
+    productLinkButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            selectedProductID = btn.dataset.id;
+            if (selectedProductID !== null) {
+                localStorage.setItem("productId", Number(selectedProductID));
+            } else {
+                localStorage.setItem("productId", 1);
+            }
+            window.location.href = "./product_details.html";
+        })
+    });
 
 }
+
+
+
 
 async function getProducts() {
 
     const data = await fetch('./js/products.json');
     const products = await data.json();
     products ? localStorage.setItem("products", JSON.stringify(products)) : [];
-}   
+}
 getProducts();
 
 productsFunc();
+
+routeProductDetails();
+

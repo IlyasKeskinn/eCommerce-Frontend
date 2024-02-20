@@ -14,8 +14,6 @@ function dealTimer() {
         countDownUnits[2].children[0].innerHTML = minute < 10 ? `0${minute}` : minute;
         countDownUnits[3].children[0].innerHTML = remainSecond < 10 ? `0${remainSecond}` : remainSecond;
 
-
-        console.log(day);
         if (timer < 1) {
             clearInterval(countDown);
         } else {

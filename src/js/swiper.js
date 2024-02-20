@@ -1,10 +1,11 @@
 const mySwiper = document.querySelector(".mySwiper");
+const mySwiper2 = document.querySelector(".mySwiper2");
 const swiperPagination = document.querySelector(".swiper-pagination");
 const swiperButtonNext = document.querySelector(".swiper-button-next");
 const swiperButtonPrev = document.querySelector(".swiper-button-prev");
 
 
-var swiper = new Swiper(mySwiper, {
+var swiper1 = new Swiper(mySwiper, {
     // If we need pagination
     pagination: {
         el: swiperPagination,
@@ -40,3 +41,39 @@ var swiper = new Swiper(mySwiper, {
 });
 
 
+var swiper2 = new Swiper(mySwiper2, {
+    direction: "horizontal",
+    slidesPerView: 5,
+    spaceBetween: 10,
+    loop : true,
+    // Navigation arrows
+    navigation: {
+        nextEl: swiperButtonNext,
+        prevEl: swiperButtonPrev,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+    },
+});
+
+
+
+
+export { swiper1 }
+
+export { swiper2 }

@@ -125,7 +125,7 @@ const CartController = (function () {
             if (isItemExits) {
                 data.cart.forEach((cartItem, index) => {
                     if (cartItem.id === findProduct.id) {
-                        prd = { ...findProduct, "amount": cartItem.amount + 1 };
+                        prd = { ...findProduct, "amount": cartItem.amount + 1, "selected_size": findProduct.size_options[0], "selected_color": findProduct.color_options[0] };
                         data.cart.splice(index, 1, prd)
                     }
                 });
