@@ -54,6 +54,11 @@
     height: auto !important;
     width: 100% !important;
 }
+.gallery-thumbs li img.active{
+    opacity: 1;
+    cursor :no-drop;
+}
+
 
 .gallery-thumbs li img.active {
     opacity: 1;

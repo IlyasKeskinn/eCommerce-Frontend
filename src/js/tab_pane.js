@@ -4,6 +4,7 @@ function tabPane() {
     
 
    function tabPaneActive(e) {
+    e.preventDefault();
         const triggerId = e.target.getAttribute("id");
     Array.from(navs).forEach((nav)=>{
      
@@ -11,7 +12,6 @@ function tabPane() {
             e.target.classList.add("active");
         Array.from(tabs).forEach(tab =>{
             if (tab.getAttribute("aria-labelledby") == triggerId) {
-
                     tab.classList.add("active");
                 }else{
                     if(tab.classList.contains("active")){

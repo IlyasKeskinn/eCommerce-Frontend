@@ -170,7 +170,7 @@
 .cart-table__wrapper .remove-cart svg{
     pointer-events: none !important;
 }
-.cart-table__wrapper .quantity-control__number{
+.quantity-control__number{
     pointer-events: none;
 }
 
