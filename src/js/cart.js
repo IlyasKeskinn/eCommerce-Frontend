@@ -3,29 +3,47 @@ import { UIControl } from "./aside_section.js";
 const StorageController = (function () {
 
     return {
-        storeCart: function (product) {
+        storeCart: function (product, amount = 1, size = null, color = null) {
             let cart = [];
             if (localStorage.getItem("cart") === null) {
                 cart = [];
                 cart.push({ ...product });
             } else {
                 cart = JSON.parse(localStorage.getItem("cart"));
-                const isItemExits = cart.find((cartItem) => cartItem.id === product.id);
+
+                const isItemExits = cart.find((cartItem) =>
+                    cartItem.id === product.id &&
+                    cartItem.selected_size === size &&
+                    cartItem.selected_color === color
+                );
+
                 if (isItemExits) {
                     cart.forEach((cartItem, index) => {
-                        if (cartItem.id === product.id) {
-                            const prd = { ...product, "amount": cartItem.amount + 1 };
-                            cart.splice(index, 1, prd)
+                        if (cartItem.id === product.id && cartItem.selected_size === size && cartItem.selected_color === color) {
+                            const prd = {
+                                ...product,
+                                "amount": amount,
+                                "selected_size": size !== null ? size : product.size_options[0],
+                                "selected_color": color !== null ? color : product.color_options[0],
+                                "cartId": cart.length + 1
+                            };
+                            cart.splice(index, 1, prd);
                         }
                     });
                 } else {
-                    cart.push({ ...product });
+                    cart.push({
+                        ...product, "amount": amount,
+                        "selected_size": size !== null ? size : product.size_options[0],
+                        "selected_color": color !== null ? color : product.color_options[0],
+                        "cartId": cart.length + 1
+                    });
                 }
             }
+
             localStorage.setItem("cart", JSON.stringify(cart));
             return true;
-
         },
+
         getCart: function () {
             let cart;
             if (localStorage.getItem("cart") === null) {
@@ -57,17 +75,18 @@ const StorageController = (function () {
         },
         updateCartAmount: function (e) {
             const dataId = e.target.dataset.id;
+            const cartItemID = e.target.getAttribute("cart-id");
             const cart = this.getCart();
             let updatedPrd;
             let amount;
             cart.forEach((cartItem, index) => {
-                if (cartItem.id === Number(dataId)) {
+                if (cartItem.cartId === Number(cartItemID)) {
                     if (e.target.classList.contains("quantity-control__increment")) {
                         amount = this.incrementProductAmount(cartItem)
                     } else {
                         amount = this.reduceProductAmount(cartItem);
                     }
-                    updatedPrd = { ...cartItem, "amount": Number(amount) };
+                    updatedPrd = { ...cartItem, "amount": Number(amount), "color": cartItem.selected_color, "size": cartItem.selected_size };
                     cart.splice(index, 1, updatedPrd);
                 }
             });
@@ -116,25 +135,44 @@ const CartController = (function () {
         getData: function () {
             return data;
         },
-        addedProduct: function (productButton) {
-            const dataId = productButton.target.dataset.id;
+        addedProduct: function (dataId, amount = 1, size = null, color = null) {
             const products = StorageController.getProducts();
             const findProduct = products.find((product) => product.id === Number(dataId));
-            const isItemExits = data.cart.find((cartItem) => cartItem.id === findProduct.id);
+
+            // Kontrolü id, size ve color üzerinden yap
+            const isItemExits = data.cart.find((cartItem) =>
+                cartItem.id === findProduct.id &&
+                cartItem.selected_size === size &&
+                cartItem.selected_color === color
+            );
+
             let prd;
+
             if (isItemExits) {
                 data.cart.forEach((cartItem, index) => {
-                    if (cartItem.id === findProduct.id) {
-                        prd = { ...findProduct, "amount": cartItem.amount + 1, "selected_size": findProduct.size_options[0], "selected_color": findProduct.color_options[0] };
-                        data.cart.splice(index, 1, prd)
+                    if (cartItem.id === findProduct.id && cartItem.selected_size === size && cartItem.selected_color === color) {
+                        prd = {
+                            ...findProduct,
+                            "amount": cartItem.amount + amount,
+                            "selected_size": size !== null ? size : findProduct.size_options[0],
+                            "selected_color": color !== null ? color : findProduct.color_options[0],
+                            "cartId": data.cart.length + 1
+                        };
+                        data.cart.splice(index, 1, prd);
                     }
                 });
 
             } else {
-                prd = { ...findProduct, "amount": 1, "selected_size": findProduct.size_options[0], "selected_color": findProduct.color_options[0] };
+                prd = {
+                    ...findProduct,
+                    "amount": amount,
+                    "selected_size": size !== null ? size : findProduct.size_options[0],
+                    "selected_color": color !== null ? color : findProduct.color_options[0],
+                    "cartId": data.cart.length + 1
+                };
                 data.cart.push(prd);
-
             }
+
             this.initData();
             return prd;
         },
@@ -150,16 +188,17 @@ const CartController = (function () {
         },
         updateCartAmount: function (e) {
             const dataId = e.target.dataset.id;
+            const cartId = e.target.getAttribute("cart-id");
             let updatedPrd;
             let amount;
             data.cart.forEach((cartItem, index) => {
-                if (cartItem.id === Number(dataId)) {
+                if (cartItem.cartId === Number(cartId)) {
                     if (e.target.classList.contains("quantity-control__increment")) {
                         amount = this.incrementProductAmount(cartItem)
                     } else {
                         amount = this.reduceProductAmount(cartItem);
                     }
-                    updatedPrd = { ...cartItem, "amount": Number(amount) };
+                    updatedPrd = { ...cartItem, "amount": Number(amount), "color": cartItem.selected_color, "size": cartItem.selected_size };
                     data.cart.splice(index, 1, updatedPrd);
                 }
             });
@@ -258,7 +297,7 @@ const UIController = (function () {
                     asideCartItems += `
                 <hr class="divider text-secondary">
         
-                <div data-id="${cartItems.id}" class="cart-drawer-item d-flex position-relative">
+                <div data-id="${cartItems.id}" "cart-id" ="${cartItems.id}" class="cart-drawer-item d-flex position-relative">
                 <div class="position-relative cart-drawer-img-wrapper">
                     <img src="./img/product${cartItems.img}" alt="" class="cart-item-img">
                 </div>
@@ -284,7 +323,7 @@ const UIController = (function () {
             let cartItems = '';
             cart.forEach((cartItem, index) => {
                 cartItems +=
-                    ` <tr data-id="${cartItem.id}" class="cart-table-row">
+                    ` <tr data-id="${cartItem.id}" cart-id="${cartItem.cartId}"  class="cart-table-row">
                 <td>
                     <div class="position-relative cart-drawer-img-wrapper">
                         <img src="./img/product/${cartItem.img}" alt=""
@@ -309,15 +348,15 @@ const UIController = (function () {
                     <div class="quantity-control position-relative">
                         <input type="number" name="quantity"
                             class="quantity-control__number text-center" value="${cartItem.amount}" min="1">
-                        <a class="quantity-control__reduce" data-id="${cartItem.id}">-</a>
-                        <a class="quantity-control__increment" data-id="${cartItem.id}">+</a>
+                        <a class="quantity-control__reduce" data-id="${cartItem.id}" cart-id="${cartItem.cartId}">-</a>
+                        <a class="quantity-control__increment" data-id="${cartItem.id}" cart-id="${cartItem.cartId}">+</a>
                     </div>
                 </td>
                 <td>
                     <span class="shopping-cart__subtotal ">$${CartController.productTotal(cartItem)}</span>
                 </td>
                 <td>
-                    <a href="#" class="remove-cart" data-id="${cartItem.id}">
+                    <a href="#" class="remove-cart" data-id="${cartItem.id}" cart-id="${cartItem.cartId}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                             <path
@@ -347,11 +386,12 @@ const UIController = (function () {
         },
         updateProductUI: function (e) {
             const dataId = e.target.dataset.id;
+            const cartItemId = e.target.getAttribute("cart-id");
             const cartPageItemList = document.querySelector(Selectors.cartPageItemlist).children;
 
             Array.from(cartPageItemList).forEach(cartItem => {
-                if (cartItem.dataset.id == dataId) {
-                    const element = cart.find(item => item.id === Number(dataId));
+                if (cartItem.getAttribute("cart-id") == cartItemId) {
+                    const element = cart.find(item => item.cartId == cartItemId);
 
                     if (element) {
                         const priceElement = cartItem.querySelector('.shopping-cart__subtotal');
@@ -422,12 +462,13 @@ const Cart = (function (UICtrl, CartCtrl, StorageCtrl) {
     }
 
 
-    const addToCart = function (button) {
+    const addToCart = function (button, amount, size, color) {
         //add to product data
-        const addedProduct = CartCtrl.addedProduct(button);
+        const dataId = button.target.dataset.id;
+        const addedProduct = CartCtrl.addedProduct(dataId, amount, size, color);
 
         //add product to localStorage
-        const isAdd = StorageCtrl.storeCart(addedProduct);
+        const isAdd = StorageCtrl.storeCart(addedProduct, amount, size, color);
         if (isAdd) {
             //update cart UI
             UICtrl.updateCartAmount(CartCtrl.getData().amount);
@@ -485,7 +526,10 @@ const Cart = (function (UICtrl, CartCtrl, StorageCtrl) {
         init: function () {
             loadEventListener();
         },
-        deleteItem: deleteItem
+        deleteItem: deleteItem,
+        addItemToCart: function (dataId, amount, size, color) {
+            addToCart(dataId, amount, size, color);
+        }
     }
 
 })(UIController, CartController, StorageController);
@@ -494,6 +538,11 @@ function cartFunc() {
     Cart.init();
 }
 
+function addItem(dataId, amount, size, color) {
+    Cart.addItemToCart(dataId, amount, size, color);
+}
+
+export { addItem }
 
 export default cartFunc();
 

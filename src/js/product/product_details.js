@@ -1,4 +1,4 @@
-
+import { addItem } from "../cart.js";
 function loadProductDetails() {
 
     const productWrapper = document.querySelector(".product-single-wrapper");
@@ -11,16 +11,25 @@ function loadProductDetails() {
 
     const singleImage = document.querySelector(".single-img");
 
+    const addCartBtn = document.querySelector(".btn-addtocart ");
+
+    const productQuantity = document.querySelector(".quantity-control__number");
+
+
+    //product gallery
+
+    galleryThumbImages[0].classList.add("active");
+    singleImage.src = galleryThumbImages[0].src;
+
     galleryThumbImages.forEach((img, index) => {
-        img.classList.remove("active")
-        img.addEventListener("click", function () {
-            galleryThumbImages.forEach(image => {
-                image.classList.remove("active");
-            })
-            img.classList.add("active");
-            singleImage.src = img.src;
+    img.addEventListener("click", function () {
+        galleryThumbImages.forEach(image => {
+            image.classList.remove("active");
         })
+        img.classList.add("active");
+        singleImage.src = img.src;
     })
+})
 
     const findProduct = products.find((item) => item.id === Number(productID));
     if (productID !== null) {
@@ -34,11 +43,12 @@ function loadProductDetails() {
 
         let selectSize = '';
         let selectColor = '';
-        let amount = 1;
+        let amount = Number(productQuantity.value);
         //size list & color list 
         document.addEventListener('DOMContentLoaded', function () {
             const sizeSwatchList = document.querySelector("#sizeSwatchList");
             const colorSwatchList = document.querySelector("#colorSwatchList");
+
             findProduct.size_options.forEach((size, index) => {
                 //size list 
                 const sizeInput = document.createElement("input");
@@ -53,6 +63,12 @@ function loadProductDetails() {
                 sizeSwatchList.appendChild(sizeInput);
                 sizeSwatchList.appendChild(sizeLabel);
 
+                if (index === 0) {
+                    sizeInput.checked = true;
+                    sizeLabel.classList.add("active");
+                    selectSize = size;
+                }
+                
                 sizeInput.addEventListener("change", function () {
                     document.querySelectorAll(".swatch.js-swatch").forEach((label) => {
                         label.classList.remove("active");
@@ -81,6 +97,12 @@ function loadProductDetails() {
                 colorSwatchList.appendChild(colorInput);
                 colorSwatchList.appendChild(colorLabel);
 
+                if (index ===0) {
+                    colorInput.checked = true;
+                    colorLabel.classList.add("active");
+                    selectColor = color
+                }
+
                 colorInput.addEventListener("change", function () {
                     document.querySelectorAll('.swatch-color.js-swatch').forEach((label) => {
                         label.classList.remove("active");
@@ -95,27 +117,35 @@ function loadProductDetails() {
             });
         });
 
-        amount = quantityControl();
-        
+        quantityControl(amount);
+
+        addCartBtn.setAttribute("data-id", productID);
+
+        addCartBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            amount = Number(productQuantity.value);
+            addItem(e, amount,selectSize,selectColor);
+            productQuantity.setAttribute("value", 1);
+            quantityControl(Number(productQuantity.value));
+        });
+
     }
 }
 
-function quantityControl() {
+function quantityControl(amount) {
     const incrementAmountBtn = document.querySelector(".quantity-control__increment");
     const reduceAmountBtn = document.querySelector(".quantity-control__reduce");
     const productQuantity = document.querySelector(".quantity-control__number");
-    let amount = 1;
+    let newAmount = amount;
     incrementAmountBtn.addEventListener("click", (() => {
-        amount = incrementAmount(amount);
-        productQuantity.value = amount;
+        newAmount = incrementAmount(newAmount);
+        productQuantity.setAttribute("value", newAmount)
+    }))
+    reduceAmountBtn.addEventListener("click", (() => {
+        newAmount = reduceAmount(newAmount);
+        productQuantity.setAttribute("value", newAmount)
     }))
 
-    reduceAmountBtn.addEventListener("click", (()=>{
-        amount = reduceAmount(amount);
-        productQuantity.value = amount;
-    }))
-
-    return amount;
 
 }
 
