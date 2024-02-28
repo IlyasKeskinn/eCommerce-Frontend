@@ -183,7 +183,53 @@
     font-size: 1.6rem;
     text-transform: capitalize;
 }
+.product-singe_reviews .review-list{
+    margin: 0 2rem;
+}
+.product-singe__reviews .review-list li{
+    padding: 1rem 0;
+    border-bottom: solid 1px rgba(240, 240, 240, 0.7);
+}
 
+.product-singe__reviews .review-list .review-info{
+    display: flex !important; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0 ;
+}
+
+.review-form .review-form__info{
+    margin: 4rem 0 ;
+}
+.review-form .review-form__info h5{
+    font-size: 1.8rem;
+}
+.review-form .select-star-rating{
+    display: flex;
+    align-items: center;
+}
+
+
+.review-form__wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.review-form__wrapper .group input, textarea {
+    width: 100%;
+}
+.review-form__wrapper .group {
+    margin: 10px 0 ;
+}
+.review-form__wrapper  .col-12 {
+    width: 100%;
+    flex:  0  0 auto;
+}
+.review-form__wrapper  button {
+    width: 25%; 
+    padding: 15px 0;
+}
 
 
 @media (max-width : 992px) {

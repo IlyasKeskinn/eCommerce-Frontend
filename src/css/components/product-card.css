@@ -101,7 +101,7 @@
     fill: var(--light-gray)
 }
 
-.review-stars-group svg.fill {
+.review-stars-group svg.active {
     fill: orange;
 }
 .pc__btn{
