@@ -104,6 +104,9 @@
 .review-stars-group svg.active {
     fill: orange;
 }
+.review-stars-group svg.is-overed {
+    fill: orange;
+}
 .pc__btn{
     position: absolute;
     top: 0;

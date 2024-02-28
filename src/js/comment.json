@@ -1,0 +1,11 @@
+[
+    {
+        "ID" : 1,
+        "product_id" : 1,
+        "comment_text" : "Lorem ipsum", 
+        "comment_author" : "İlyas Keskin",
+        "comment_mail" : "ilyaskeskn8@gmail.com",
+        "comment_rate" : 5,
+        "date" : ""
+    }
+]

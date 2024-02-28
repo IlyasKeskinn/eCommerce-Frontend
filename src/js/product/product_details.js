@@ -1,4 +1,7 @@
 import { addItem } from "../cart.js";
+
+import {comment} from "./comments.js";
+
 function loadProductDetails() {
 
     const productWrapper = document.querySelector(".product-single-wrapper");
@@ -15,7 +18,7 @@ function loadProductDetails() {
 
     const productQuantity = document.querySelector(".quantity-control__number");
 
-
+    comment(productID);
     //product gallery
 
     galleryThumbImages[0].classList.add("active");
